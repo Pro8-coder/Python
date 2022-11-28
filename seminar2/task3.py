@@ -7,12 +7,17 @@
 
 
 def season_rus(m):
-    for i, x in enumerate(year):
+    for i, x in enumerate(year_l):
         if m in x:
             year_rus = ['зима', 'весна', 'лето', 'осень']
             return year_rus[i]
 
 
-year = [[1, 2, 12], [3, 4, 5], [6, 7, 8], [9, 10, 11]]
+year_l = [[1, 2, 12], [3, 4, 5], [6, 7, 8], [9, 10, 11]]
 month = int(input('Введите № месяца: '))
 print(season_rus(month))
+
+year_d = {1: 'зима', 2: 'зима', 3: 'весна', 4: 'весна', 5: 'весна', 6: 'лето',
+        7: 'лето', 8: 'лето', 9: 'осень', 10: 'осень', 11: 'осень', 12: 'зима'}
+month = int(input('Введите № месяца: '))
+print(year_d.get(month))
