@@ -10,11 +10,10 @@ from my_functions import rand_lst
 # - [2, 3, 5, 6] => [12, 15]
 
 def product_pairs(lst):
-    print(lst)
     result = []
     for i in range(round(len(lst) / 2)):
         result.append(lst[i] * lst[-(i + 1)])
-    return result
+    return lst, result
 
 
-print(product_pairs(rand_lst()))
+print(*product_pairs(rand_lst()), sep='\n')
