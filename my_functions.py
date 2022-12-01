@@ -1,3 +1,6 @@
+from random import randint
+
+
 def input_int(text='Введите число: '):
     '''Ввод целого числа и проверка верности ввода'''
     while True:
@@ -8,3 +11,10 @@ def input_int(text='Введите число: '):
             continue
         break
     return num
+
+
+def rand_lst():
+    lst = []
+    while len(lst) < 7:
+        lst.append(randint(0, 10))
+    return lst
