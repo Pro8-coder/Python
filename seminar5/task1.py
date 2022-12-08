@@ -2,8 +2,8 @@
 # данные, вводимые пользователем. Об окончании ввода данных свидетельствует
 # пустая строка.
 
-with open('task1.txt', 'w', encoding='utf=8') as task1:
-    try:
+try:
+    with open('task1.txt', 'w', encoding='utf=8') as task1:
         print('Введите текст для записи в файл.'
               ' Для выхода введите пустую строку.')
         while True:
@@ -11,5 +11,5 @@ with open('task1.txt', 'w', encoding='utf=8') as task1:
             if line == '':
                 break
             print(line, file=task1)
-    except IOError:
-        print('Произошла ошибка ввода/вывода')
+except IOError:
+    print('Произошла ошибка ввода/вывода')
