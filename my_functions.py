@@ -25,3 +25,13 @@ def rand_lst_float():
     while len(lst) < 7:
         lst.append(randint(100, 1000) / 100)
     return lst
+
+
+def open_utf(f):
+    try:
+        with open(f, encoding='utf=8') as task3:
+            average_salary = [{line.split()[0]: float(line.split()[1])}
+                              for line in task3]
+    except IOError:
+        print('Произошла ошибка ввода/вывода')
+    return average_salary
