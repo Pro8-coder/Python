@@ -13,8 +13,15 @@ def input_int(text='Введите число: '):
     return num
 
 
-def rand_lst():
+def rand_lst_int():
     lst = []
     while len(lst) < 7:
         lst.append(randint(0, 10))
+    return lst
+
+
+def rand_lst_float():
+    lst = []
+    while len(lst) < 7:
+        lst.append(randint(100, 1000) / 100)
     return lst
