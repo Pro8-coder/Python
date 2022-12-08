@@ -1,4 +1,4 @@
-from my_functions import rand_lst
+from my_functions import rand_lst_int
 
 '''Доп. задания'''
 
@@ -7,4 +7,4 @@ from my_functions import rand_lst
 # Пример:
 # - [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
 
-print(sum(rand_lst()[1::2]))
+print(sum(rand_lst_int()[1::2]))
