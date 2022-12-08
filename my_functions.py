@@ -25,12 +25,3 @@ def rand_lst_float():
     while len(lst) < 7:
         lst.append(randint(100, 1000) / 100)
     return lst
-
-
-def open_r_utf(file_name):
-    try:
-        with open(file_name, encoding='utf=8') as f_obj:
-            lst = [{line.split()[0]: float(line.split()[1])} for line in f_obj]
-    except IOError:
-        print('Произошла ошибка ввода/вывода')
-    return lst
