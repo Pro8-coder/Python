@@ -27,11 +27,10 @@ def rand_lst_float():
     return lst
 
 
-def open_utf(f):
+def open_r_utf(file_name):
     try:
-        with open(f, encoding='utf=8') as task3:
-            average_salary = [{line.split()[0]: float(line.split()[1])}
-                              for line in task3]
+        with open(file_name, encoding='utf=8') as f_obj:
+            lst = [{line.split()[0]: float(line.split()[1])} for line in f_obj]
     except IOError:
         print('Произошла ошибка ввода/вывода')
-    return average_salary
+    return lst
