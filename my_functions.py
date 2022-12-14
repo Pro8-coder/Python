@@ -15,6 +15,7 @@ def input_int(text='Введите число: '):
 
 
 def rand_lst_int():
+    '''Создание и заполнение рандомайзером списка целых чисел'''
     lst = []
     while len(lst) < 7:
         lst.append(randint(0, 10))
@@ -22,17 +23,20 @@ def rand_lst_int():
 
 
 def rand_lst_float():
+    '''Создание и заполнение рандомайзером списка чисел с плавающей точкой'''
     lst = []
     while len(lst) < 7:
         lst.append(randint(100, 1000) / 100)
     return lst
 
 
-def test_time(func):
+def decorator_time(func):
+    '''Декоратор для замера времени работы функции'''
+
     def wrapper(*args, **kwargs):
         start_t = time()
         func(*args, **kwargs)
         end_t = time()
-        return start_t - end_t
+        return end_t - start_t
 
     return wrapper
