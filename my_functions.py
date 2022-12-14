@@ -1,4 +1,5 @@
 from random import randint
+from time import time
 
 
 def input_int(text='Введите число: '):
@@ -25,3 +26,13 @@ def rand_lst_float():
     while len(lst) < 7:
         lst.append(randint(100, 1000) / 100)
     return lst
+
+
+def test_time(func):
+    def wrapper(*args, **kwargs):
+        start_t = time()
+        func(*args, **kwargs)
+        end_t = time()
+        return start_t - end_t
+
+    return wrapper
