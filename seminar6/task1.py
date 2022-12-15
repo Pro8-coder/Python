@@ -14,7 +14,8 @@ print(f'Новый: ', timeit("new_season_rus(month)",
 
 '''
 seminar2_task2.py
-Новый код работает быстрее за счёт множественного присвоения.
+Новый код работает быстрее за счёт множественного присвоения 
+и отказа от временной переменной.
 '''
 print('seminar2_task2')
 print(f'Старый: ', timeit("exchange_neighbor_elements(lst)",
