@@ -30,7 +30,7 @@ def rand_lst_float():
     return lst
 
 
-def decorator_time(func):
+def decor_time(func):
     '''Декоратор для замера времени работы функции'''
 
     def wrapper(*args, **kwargs):
@@ -38,5 +38,15 @@ def decorator_time(func):
         func(*args, **kwargs)
         end_t = time()
         return end_t - start_t
+
+    return wrapper
+
+
+def decor_autocomplete(func):
+    '''Декоратор для передачи объектов функции'''
+
+    def wrapper(*args, **kwargs):
+        func(*args, **kwargs)
+        return func
 
     return wrapper
