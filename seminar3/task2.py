@@ -1,4 +1,4 @@
-from functions import input_int
+from my_functions import input_int
 
 '''Базовые задания'''
 
